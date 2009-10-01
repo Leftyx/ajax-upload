@@ -1,23 +1,9 @@
 /**
- * Ajax upload
+ * AJAX Upload
  * Project page - http://valums.com/ajax-upload/
  * Copyright (c) 2008 Andris Valums, http://valums.com
  * Licensed under the MIT license (http://valums.com/mit-license/)
- * Version 3.7 (09.07.2009)
  */
-
-/**
- * Changes from the previous version:
- * 1. Fixed minor bug where click outside the button
- * would open the file browse window
- * 2. Fixed Upload hanging in Safari
- * http://blog.airbladesoftware.com/2007/8/17/note-to-self-prevent-uploads-hanging-in-safari
- * 3. Added hoverClass parameter
- * 
- * For the full changelog please visit: 
- * http://valums.com/ajax-upload-changelog/
- */
-
 (function(){
 	
 var d = document, w = window;
@@ -300,7 +286,7 @@ AjaxUpload.prototype = {
 	enable : function(){
 		this._disabled = false;
 	},
-	// removes ajaxupload
+	// removes instance
 	destroy : function(){
 		if(this._input){
 			if(this._input.parentNode){
