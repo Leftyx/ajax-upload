@@ -349,10 +349,10 @@ AjaxUpload.prototype = {
 		// there is some time while you can leave the button.
 		// So we should not change display to none immediately
 		addEvent(input, 'click', function(){
-			self.justClicked = true;
+			self._justClicked = true;
 			setTimeout(function(){
 				// we will wait 3 seconds for dialog to open
-				self.justClicked = false;
+				self._justClicked = false;
 			}, 2500);			
 		});		
 		
@@ -411,7 +411,7 @@ AjaxUpload.prototype = {
 					// if input was just clicked do not hide it
 					// to prevent safari bug
 					 
-					if (self.justClicked){
+					if (self._justClicked){
 						return;
 					}
 					
